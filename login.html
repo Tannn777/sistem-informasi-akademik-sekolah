@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login SMK</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="info-panel">
+        <div class="logos">
+          <img src="htlogo.png" alt="Logo Sekolah" class="logo" />
+          <img src="htlogo2.png" alt="Logo Sekolah" class="logo" />
+        </div>
+        <h2 class="judul-smk">SMK HANG TUAH<br />1 JAKARTA</h2>
+        <p class="deskripsi-web">Website Sistem<br />Informasi Akademik Sekolah</p>
+        <img src="htsmk.png" alt="SMK Hebat" class="smk-logo" />
+      </div>
+
+      <div class="form-panel">
+        <h2 id="login-title">Login Siswa</h2>
+        <form id="loginForm">
+          <div class="input-block">
+            <div class="input-row">
+              <img src="user.png" class="icon" alt="User Icon" />
+              <label for="username">Nama Siswa</label>
+            </div>
+            <input type="text" id="username" name="username" placeholder="Masukkan nama siswa" required />
+          </div>
+
+          <div class="input-block">
+            <div class="input-row">
+              <img src="lock.png" class="icon" alt="Password Icon" />
+              <label for="password">Password</label>
+            </div>
+            <div class="password-group">
+              <input type="password" id="password" name="password" placeholder="Masukkan password siswa" required />
+              <img src="hide.png" class="eye-icon" onclick="togglePassword()" alt="Show Password" />
+            </div>
+          </div>
+
+          <div class="dropdown-row">
+            <img src="group.png" class="icon" alt="Group Icon" />
+            <label for="role">Masuk Sebagai</label>
+            <select id="role" name="role">
+              <option value="siswa">Siswa</option>
+              <option value="guru">Guru</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+
+          <div class="button-container">
+            <button type="button" class="btn-login" onclick="redirectToPage()">Masuk</button>
+            <button type="reset" class="btn-reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading-screen">
+    <div class="logo-wrapper">
+      <img src="htlogo.png" alt="Loading Logo" class="logo-img">
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const eyeIcon = document.querySelector(".eye-icon");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.src = "show.png";
+      } else {
+        passwordInput.type = "password";
+        eyeIcon.src = "hide.png";
+      }
+    }
+
+    function redirectToPage() {
+      const role = document.getElementById("role").value;
+
+      if (role === "siswa") {
+        window.location.href = "home.html";
+      } else if (role === "guru") {
+        window.location.href = "homeguru.html";
+      } else if (role === "admin") {
+        window.location.href = "homeadmin.html";
+      }
+    }
+  </script>
+</body>
+</html>

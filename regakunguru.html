@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buat Akun Guru</title>
+  <link rel="stylesheet" href="regakunguru.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-logo">
+      <img src="htlogo.png" alt="Logo Sekolah">
+      <div class="nav-text">
+        <div>SMK HANG TUAH</div>
+        <div>1 JAKARTA</div>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <ul class="nav-links">
+        <li><a href="homeadmin.html">Beranda</a></li>
+        <li><a href="buatjadwalguru.html">Jadwal</a></li>
+        <li><a href="akun.html"  class="active">Akun</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-logout">
+      <a href="login.html">Log Out</a>
+    </div>
+  </nav>
+
+  <div class="form-wrapper">
+    <div class="role-tabs">
+      <button class="active">Guru</button>
+      <button onclick="window.location.href='regakunsiswa.html'">Siswa</button>
+      <button onclick="window.location.href='regakunadmin.html'">Admin</button>
+    </div>
+
+    <div class="form-box">
+      <h2>Buat Akun Guru</h2>
+      <form action="regakun.php" method="POST">
+        <label for="username">Nama Lengkap Guru</label>
+        <input type="text" id="username" name="username" placeholder="Masukkan Nama Lengkap" required>
+
+        <label for="nip">NIP</label>
+        <input type="text" id="nip" name="nip" placeholder="Masukkan NIP" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+
+        <div class="buttons">
+          <button type="button" class="back" onclick="window.location.href='akun.html'">Kembali</button>
+          <button type="submit" class="submit">Tambahkan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

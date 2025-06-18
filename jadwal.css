@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-image: url("htbkg2.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-logo img {
+  height: 45px;
+}
+
+.nav-text {
+  color: white;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 110px;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #0CC6DA;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-logout a {
+  text-decoration: none;
+  background-color: #007083;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-right: 50px;
+}
+
+.nav-logout a:hover {
+  background-color: #005a6a;
+}
+
+.jadwal-container {
+  backdrop-filter: blur(8px);
+  padding: 100px 20px 40px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
+}
+
+.hari-container {
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.2); /* transparan putih */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+.hari-container h2 {
+  font-size: 28px;
+  color: white;
+  margin: 0 0 10px 0;
+}
+
+.hari-container.kiri h2 {
+  text-align: left;
+}
+
+.hari-container.kanan h2 {
+  text-align: right;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  background-color: rgba(100, 140, 180, 0.7); /* biru sedang semi transparan */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  color: white; /* supaya tulisan jelas */
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 14px;
+  color: white;
+}
+
+th {
+  background-color: rgba(0, 102, 102, 0.8);
+}

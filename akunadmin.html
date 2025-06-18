@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelola Akun</title>
+  <link rel="stylesheet" href="akunsiswa.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="htlogo.png" alt="Logo Sekolah">
+      <div class="nav-text">
+        <div>SMK HANG TUAH</div>
+        <div>1 JAKARTA</div>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <ul class="nav-links">
+        <li><a href="homeadmin.html">Beranda</a></li>
+        <li><a href="buatjadwalguru.html">Jadwal</a></li>
+        <li><a href="akun.html"  class="active">Akun</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-logout">
+      <a href="login.html">Log Out</a>
+    </div>
+  </nav>
+  <div class="background"></div>
+
+  <div class="form-wrapper">
+    <div class="role-tabs">
+      <button onclick="window.location.href='akun.html'">Guru</button>
+      <button  onclick="window.location.href='akunsiswa.html'">Siswa</button>
+      <button class="active">Admin</button>
+    </div> 
+    
+  <div class="judul">
+    <h2>Kelola Akun</h2>
+    <p>Admin | SMK HANG TUAH 1 JAKARTA</p>
+  </div>
+
+  <div class="akun-container">
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Nama</th>
+          <th>NIP</th>
+          <th>Password</th>
+          <th>Akun Guru</th>
+        </tr>
+      </thead>
+      <tbody id="data-akun">
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tambah-akun">
+    <a href="regakunadmin.html"><button>Tambahkan Akun</button></a>
+
+  </div>
+
+  <script>
+    fetch('akunadmin.php')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('data-akun').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

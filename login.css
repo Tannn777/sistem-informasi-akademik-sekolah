@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: url("ht1.png") no-repeat center center/cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  backdrop-filter: blur(3px);
+}
+
+.login-box {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.info-panel {
+  flex: 1;
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.info-panel .logos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 70px;
+}
+
+.smk-logo {
+  width: 200px;
+  height: auto;
+}
+
+.judul-smk {
+  color: #006764;
+  font-weight: bold;
+}
+
+.deskripsi-web {
+  font-size: 17px;
+  font-weight: bold;
+  color: #006764;
+  margin-bottom: 20px;
+}
+
+.form-panel {
+  flex: 1;
+  background-color: rgba(0, 112, 131, 0.75);
+  padding: 30px;
+  color: white;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-panel h2 {
+  margin-bottom: 20px;
+}
+
+.form-panel form {
+  max-width: 300px;
+  width: 100%;
+}
+
+.input-block {
+  margin-bottom: 15px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.password-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.dropdown-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  width: 140px;
+  font-weight: bold;
+  background-color: white;
+  color: #006764;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+select:hover {
+  background-color: #e0f7f9;
+  color: #004d4d;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.btn-login,
+.btn-reset {
+  padding: 8px 22px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login {
+  background-color: white;
+  color: #007083;
+}
+
+.btn-reset {
+  background-color: #ffffff;
+  color: #007083;
+}
+
+.btn-login:hover,
+.btn-reset:hover {
+  background-color: #e0f7f9;
+  color: #004d4d;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 77, 97, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.loader {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 6px solid transparent;
+  border-top: 6px solid #0cc6da;
+  border-right: 6px solid #0cc6da;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 2;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+  }
+
+  .info-panel, .form-panel {
+    width: 100%;
+  }
+
+  .smk-logo {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-panel form {
+    max-width: 100%;
+  }
+
+  .dropdown-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

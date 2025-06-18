@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nilai Siswa</title>
+  <link rel="stylesheet" href="nilai.css" />
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-logo">
+      <img src="htlogo.png" alt="Logo Sekolah">
+      <div class="nav-text">
+        <div>SMK HANG TUAH</div>
+        <div>1 JAKARTA</div>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <ul class="nav-links">
+        <li><a href="home.html">Beranda</a></li>
+        <li><a href="jadwal.html">Jadwal</a></li>
+        <li><a href="nilai.html"  class="active">Nilai</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-logout">
+      <a href="login.html">Log Out</a>
+    </div>
+  </nav>
+
+
+  <div class="container" id="pdfArea">
+    <h3>LAPORAN HASIL ASESMEN AKHIR SEMESTER GENAP</h3>
+    <h2>SMK HANG TUAH 1 JAKARTA</h2>
+    <h4>TAHUN PELAJARAN 2024-2025</h4>
+
+    <div class="info-box">
+      <div>Nama Peserta Didik: <span>Arthanta Zachro Helmiano</span></div>
+      <div>Nomor Induk: <span>6681</span></div>
+      <div>Program Keahlian: <span>Rekayasa Perangkat Lunak</span></div>
+      <div>Kelas/Semester: <span>XI / Genap</span></div>
+    </div>
+
+    <table class="nilai-table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>MATA PELAJARAN</th>
+          <th>UH 1</th>
+          <th>UH 2</th>
+          <th>UH 3</th>
+          <th>PAS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="6"><b>A. Kelompok Mata Pelajaran Umum</b></td></tr>
+        <tr><td>1</td><td>Pendidikan Agama Islam</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>2</td><td>Pendidikan Pancasila</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>3</td><td>Bahasa Indonesia</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>4</td><td>PJOK</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>5</td><td>Sejarah</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>6</td><td>Kewirausahaan</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+
+        <tr><td colspan="6"><b>B. Kelompok Mata Pelajaran Kejuruan</b></td></tr>
+        <tr><td>1</td><td>Keahlian</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>2</td><td>Matematika</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>3</td><td>Bahasa Inggris</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+        <tr><td>4</td><td>Mata Penjurusan Pilihan</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+      </tbody>
+    </table>
+
+    <div class="summary-box">
+      <p>Jumlah Nilai: <b>100</b></p>
+      <p>Rata-Rata Nilai: <b>100</b></p>
+    </div>
+
+    <div class="motivasi">Tingkatkan Terus Prestasi Belajarmu</div>
+  </div>
+
+  <div class="pdf-button">
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script src="pdf.js"></script>
+</body>
+</html>

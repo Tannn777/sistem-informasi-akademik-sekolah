@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('htbkg2.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.nav-text div {
+  line-height: 1.2;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-center {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: inline-flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #0CC6DA;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-logout a {
+  text-decoration: none;
+  background-color: #007083;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-logout a:hover {
+  background-color: #005a6a;
+}
+
+
+.container {
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 900px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h2, h3, h4 {
+  margin: 5px;
+  color: #005c7a;
+}
+
+.info-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+  background-color: #0cc6da;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.info-box div {
+  width: 45%;
+  margin: 5px 0;
+}
+
+.nilai-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 150, 0.9);
+}
+
+.nilai-table th,
+.nilai-table td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+
+.nilai-table th {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.summary-box {
+  margin-top: 20px;
+  background-color: #00cfe8;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.motivasi {
+  margin-top: 10px;
+  background-color: #00cfe8;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.pdf-button {
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pdf-button button {
+  padding: 12px 28px;
+  font-size: 16px;
+  background-color: #007083;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 112, 131, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  outline-offset: 3px;
+}
+
+.pdf-button button:hover {
+  background-color: #005a6a;
+  box-shadow: 0 6px 12px rgba(0, 90, 106, 0.5);
+  transform: scale(1.05);
+}
+
+.pdf-button button:active {
+  background-color: #004452;
+  box-shadow: 0 3px 6px rgba(0, 68, 82, 0.7);
+  transform: scale(0.98);
+}
+
+.pdf-button button:focus-visible {
+  outline: 3px solid #00cfe8;
+}

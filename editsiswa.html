@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Akun Guru</title>
+  <link rel="stylesheet" href="editsiswa.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="form-container">
+    <h2>Edit Akun Siswa</h2>
+    <form action="editsiswa.php" method="POST">
+      <input type="hidden" name="id" value="" id="id">
+      
+      <label for="username">Nama Lengkap</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Password</label>
+      <input type="text" id="password" name="password" required>
+      
+      <div class="btn-group">
+        
+        <button type="submit">Simpan</button>
+        <button type="button" onclick="window.location.href='akun.html'">Batal</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('id').value = params.get('id');
+    document.getElementById('username').value = params.get('username');
+    document.getElementById('password').value = params.get('password');
+  </script>
+</body>
+</html>
